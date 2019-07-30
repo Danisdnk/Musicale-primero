@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Musicale.Models.Song>
+
+
+@foreach (var item in ) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre.ToList())
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.audio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Album.nombre)
+        </td>
+    </tr>
+}

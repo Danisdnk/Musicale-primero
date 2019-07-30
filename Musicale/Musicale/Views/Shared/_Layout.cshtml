@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Musicale MVC</title>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap.min.css")
+
+    @Styles.Render("~/Content/fontawesome-all.min.css")
+    @Styles.Render("~/Content/audio.css")
+    @Styles.Render("~/Content/style.css")
+    @Styles.Render("~/Content/cards.css")
+</head>
+
+<body class="p-0 m-0">
+    <div class="container-fluid px-0">
+        <div class="row row-offcanvas row-offcanvas-left ">
+            <!-- NAVBAR-MOBILE -->
+            <div class="col-xs-12 d-lg-none">
+                <nav class="nav fixed-bottom bg-layout justify-content-around">
+                    <a href="@Url.Action("Index", "Home")" class="nav-link"><i class="fa fa-id-card" aria-hidden="true"></i></a>
+                    <a href="@Url.Action("Index", "Albums")" class="nav-link"><i class="fa fa-compact-disc" aria-hidden="true"></i></a>
+                    <a href="@Url.Action("Index", "Artists")" class="nav-link"><i class="far fa-star" aria-hidden="true"></i></a>
+                    <a href="@Url.Action("Index", "Songs")" class="nav-link"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                </nav>
+            </div>
+
+
+            <!-- NAVBAR DESKTOP -->
+            <div class="wrapper sticky-top altura bg-dark">
+
+
+
+                <div class="col d-none bg-dark d-lg-block sidebar-offcanvas pl-2" id="sidebar">
+
+
+
+                    <div class=" nav flex-sm-column bg-dark mt-5 text-center" id="menu">
+
+                        <div data-target="#item1" data-toggle="collapse" class="my-5">
+                            <a href="@Url.Action("Index", "Home")">
+                                <i class="fa fa-home fa-2x text-left align-middle "></i>
+                            </a>
+                            <span class="collapse in hidden-xs">
+                                <a class="ml-1 mr-1">@Html.ActionLink(" Home", "Index", "Home")</a>
+                            </span>
+
+                        </div>
+
+                        <div data-target="#item2" data-toggle="collapse" class="my-5">
+                            <a href="@Url.Action("Index", "Artists")" class="ml-1 mr-1">
+                                <i class="far fa-star fa-2x text-left align-middle"></i>
+                            </a>
+                            <span class="collapse in hidden-xs">
+                                <a class="ml-1 mr-1">@Html.ActionLink("Artistas", "Index", "Artists")</a>
+                            </span>
+
+                        </div>
+
+                        <div data-target="#item3" data-toggle="collapse" class="my-5">
+
+                            <a href="@Url.Action("Index", "Albums")" class="ml-1 mr-1"><i class="fa fa-compact-disc fa-2x text-left align-middle "></i>
+                            </a>
+                            <span class="collapse in hidden-xs">
+                                <a class="ml-1 mr-1">@Html.ActionLink("Albums", "Index", "Albums")</a>
+                            </span>
+
+                        </div>
+                        <div href="#" data-target="#item1" data-toggle="collapse" class="my-5">
+                           
+                            <a href="@Url.Action("Index", "Songs")" class="ml-1 mr-1">
+                                <i class="fa fa-plus fa-2x text-left align-middle "></i>
+
+                            </a>
+ 
+                            <span class="collapse in hidden-xs ">
+                                <a class="ml-1 mr-1">@Html.ActionLink("Songs", "Index", "Songs")</a>
+                            </span>
+
+                        </div>
+                        <a href="#" data-toggle="offcanvas" data-toggle="collapse" class="my-5" id="main">
+                            <i class="fa fa-angle-double-right fa-2x text-left align-middle "></i>
+                            <span class="collapse in hidden-xs ">
+                                <span class="ml-1 mr-1 ">Ocultar </span>
+                            </span>
+                        </a>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+            <div class="col p-0 m-0">
+
+                @RenderBody()
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery.js")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/miscriptjs")
+  
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

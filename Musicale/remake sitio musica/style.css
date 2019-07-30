@@ -1,0 +1,79 @@
+*{margin:0;padding:0}
+body,html{height:100%}
+body{overflow-x:hidden;background-color:#3f51b5}
+.altura{min-height:100vh;background-color:#8b9290}
+.row,.wrapper{height:100%;margin-left:0;margin-right:0}
+.column:after,.column:before,.wrapper:after,.wrapper:before{content:"";display:table}
+.column:after,.wrapper:after{clear:both}
+#sidebar{background-color:#eee;padding-left:0;float:left;min-height:100%}
+#sidebar .collapse.in{display:inline}
+#sidebar>.nav>li>a{white-space:nowrap;overflow:hidden;align-content:center}
+
+.color{background-color:#9aedf0}
+.title{color:#fff;font-size:8em;margin:0}
+/* .tamaño{width:auto; height:30vh;background-color:#6495ed;border-radius:3%} */
+.navbar-left{height:100vh;left:0;position:fixed}
+.centrar{justify-content:flex-end;display:flex;height:50%}
+.patata{background-color:red}
+.blend{
+    border-radius: 20% !important;
+    box-sizing: content-box;
+    max-width: 355px;
+
+}
+@media (max-width:576px){
+.title{color:#fff;font-size:6em;margin:0;padding:0}
+
+}
+@media (min-width:578px)and (max-width:767px){
+.card-columns{-webkit-column-count:2;-moz-column-count:2;column-count:2}
+
+.blend{
+   /* width: 15em; */
+    margin-left: 0px !important;
+    max-width: 50%;
+    
+}
+@media (min-width:768px)and (max-width:1249px){
+.card-columns{-webkit-column-count:3;-moz-column-count:3;column-count:3}
+.respoSize{
+    width:16rem !important;
+}
+.blend{
+    max-width: 75%;
+    margin-left: 0px !important;
+}
+
+ }
+ @media (min-width:1250px) and (max-width:1500px){
+    .card-columns{-webkit-column-count:3;-moz-column-count:3;column-count:3} 
+    .respoSize{
+        width:20rem !important;
+    }
+    .blend{
+        width: 10em;}
+
+}
+    
+    /*  .tamaño{width:250px!important;height:250px!important;background-color:#0ff;background-size:cover}
+     */
+ @media (min-width:1531px){
+.title{color:#fff;font-size:10.5em!important;margin:0;padding:0}
+.card-columns{-webkit-column-count:4;-moz-column-count:4;column-count:4}
+/* .tamaño{width:300px!important;height:300px!important;background-color:#0ff;background-size:cover}
+ */
+ .respoSize{
+    width:20rem !important;
+}
+ .blend{
+    border-radius: 20%;
+    margin-left: 9%;
+    width: 23em !important;
+    box-sizing: content-box;
+}
+
+ }
+
+
+a{color:#ffff;text-decoration:none;background-color:transparent}
+a:hover{color:#6495ed;text-decoration:none;background-color:transparent;cursor:pointer}

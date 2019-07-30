@@ -1,0 +1,99 @@
+﻿@model Musicale.Models.Album
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+@using (Html.BeginForm("Create", "Albums", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="col-12 justify-content-center min-vh-100 p-0 m-0 bg-light" id="main">
+        <div>
+            <a href="@Request.UrlReferrer" class="btn btn-default btn-lg" title="Back to list">
+                <span class="fas fa-arrow-left" aria-hidden="true"></span>
+            </a>
+        </div>
+        <h4 class="p-3">Crear Album</h4>
+        <hr />
+        <div class="row">
+
+
+            <div class="col-3 w-25">
+
+
+
+            </div>
+            <div class="col-8 w-100">
+
+                <div class="form-group">
+
+                    <input type="file" id="ImgPortada" accept="image/* " name="UserImageFile" onchange="return fileValidation()" />
+                    @Html.ValidationMessage("UserImageFile", "", new { @class = "text-danger" })
+
+
+
+
+                </div>
+
+                <div class="form-horizontal">
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.anio, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.anio, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.anio, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.generoID, "generoID", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("generoID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.generoID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ArtistaID, "ArtistaID", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("ArtistaID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ArtistaID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-dark" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+                    }
+
+                    @Scripts.Render("~/bundles/jquery.js")
+                    @Scripts.Render("~/bundles/bootstrap")
+                    @Scripts.Render("~/bundles/miscriptjs")
+
+                    @section Scripts {
+                        @Scripts.Render("~/bundles/jqueryval")
+                    }

@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #161925;
+    font-size:16px;
+}
+
+.altura {
+    min-height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(286deg, rgba(0,0,0,1) 0%, rgba(5,19,75,0.9612219887955182) 70%);
+}
+
+.row, .wrapper {
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+    .column:after, .column:before, .wrapper:after, .wrapper:before {
+        content: "";
+        display: table;
+    }
+
+    .column:after, .wrapper:after {
+        clear: both;
+    }
+
+#sidebar {
+   
+    padding-left: 0;
+    float: left;
+    min-height: 100%;
+}
+
+    #sidebar .collapse.in {
+        display: inline;
+    }
+
+    #sidebar > .nav > li > a {
+        white-space: nowrap;
+        overflow: hidden;
+        align-content: center;
+    }
+
+.color {
+    background-color: #9aedf0;
+}
+
+.title {
+    color: #fff;
+    font-size: 8em;
+    margin: 0;
+}
+
+.navbar-left {
+    height: 100vh;
+    left: 0;
+    position: fixed;
+}
+
+.centrar {
+    justify-content: flex-end;
+    display: flex;
+    height: 50%;
+}
+
+.patata {
+    background-color: red
+}
+
+
+
+.blend {
+    width: 100% !important;
+    height: 500px !important;
+    border-radius: 20% !important;
+    object-fit: cover !important;
+    object-position: 50% 50% !important;
+}
+
+
+
+
+
+@media (max-width:576px) {
+    .title {
+        color: #fff;
+        font-size: 6em;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width:578px)and (max-width:767px) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+   
+}
+    @media (min-width:768px)and (max-width:990px) {
+        .card-columns {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+
+
+        .card-img-top {
+            width: 100% !important;
+            height: 18vw !important;
+            object-fit: cover !important;
+        }
+
+
+
+
+        .blend {
+            width: 90% !important;
+            height: auto !important;
+            margin-top:10vh;
+        }
+    }
+
+
+@media (min-width:991px)and (max-width:1249px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+
+  
+    .card-img-top {
+        width: 100% !important;
+        height: 22vw !important;
+        object-fit: cover !important;
+    }
+
+
+    .blend {
+        max-height: 64%;
+        margin-top: 5vh;
+        margin-left: 0px !important;
+    }
+   
+
+
+
+}
+
+
+
+    @media (min-width:1250px) and (max-width:1500px) {
+        .card-columns {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+        }
+
+
+        .card-img-top {
+            width: 100% !important;
+            height: 23vw !important;
+            object-fit: cover !important;
+        }
+
+        .blend {
+            max-height: 100%;
+            margin-top: 3vh;
+            margin-left: 0px !important;
+        }
+   
+     
+      
+    }
+
+    @media (min-width:1531px) {
+        .title {
+            color: #fff;
+            font-size: 10.5em !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card-columns {
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+        }
+
+        .card-img-top {
+            width: 100% !important;
+            height: 22vw !important;
+            object-fit: cover !important;
+        
+            
+           }
+
+
+        .blend {
+           
+           width: 65%!important;
+           height:auto !important;
+          
+        }
+
+    }
+
+
+    a {
+        color: #ffff;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+        a:hover {
+            color: #6495ed;
+            text-decoration: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+
+.hate{
+   width:300px;
+   height:300px;
+   background-color:red;
+   border-radius:20%;
+
+}
+.card-img-overlay {
+    width: 100% !important;
+    height: 4vw !important;
+    object-fit: cover !important;
+}
+

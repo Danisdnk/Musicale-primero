@@ -1,0 +1,121 @@
+﻿@model Musicale.Models.Album
+
+@{
+    ViewBag.Title = "Detalles Album";
+}
+    <div>
+
+        <div>
+            <a href="@Request.UrlReferrer" class="btn btn-default btn-lg" title="Back to list">
+                <span class="fas fa-arrow-left" aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <a href="@Url.Action("Edit", "Albums", new { id = Model.ID })" class="d-inline-flex btn btn-light  ml-3 my-3"> Edita</a>
+
+    </div>
+<div class="col-12 justify-content-center min-vh-100 p-0 m-0 bg-light" id="main">
+
+
+    <div class="row placa-artista">
+
+
+        <div class="col-3 w-25">
+
+            <div class="hate">
+                <img src="@Html.DisplayFor(model=> model.portada)" id="imagePreview" class="hate" alt="...">
+
+            </div>
+        </div>
+        <div class="col-8 w-100">
+            <h3 class="p-1 text-white"> @Html.DisplayFor(model => model.nombre) - @Html.DisplayFor(model => model.Artist.nombre)</h3>
+            <hr />
+            <div class="dl-horizontal">
+
+
+                <h5 class="p-1 text-white">
+                    @Html.DisplayNameFor(model => model.Artist.nombre) artista : @Html.DisplayFor(model => model.Artist.nombre)
+                </h5>
+
+
+                <h5 class="p-1 text-white">
+                    @Html.DisplayNameFor(model => model.Gender.genero) musical: @Html.DisplayFor(model => model.Gender.genero)
+                </h5>
+
+
+                <h5 class="p-1 text-white">
+                    lanzamiento: @Html.DisplayFor(model => model.anio)
+                </h5>
+
+
+            </div>
+
+          
+
+        </div>
+
+
+
+    </div>
+
+    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-0 py-0 ">
+
+        <div id="list-example" class="list-group mt-1">
+           @{  var i = 0;
+            foreach (var item in Model.Songs)
+            {
+i++;
+                <div class="list-group-item list-group-item-action ">
+
+                    <div class="media d-flex align-items-end">
+                        <div>
+
+                            <a href="@Url.Action((string)"Edit", "Songs", new { id = item.ID }, null)" class="btn bg-light">
+                                <i class="fas fa-edit" data-toggle="tooltip" data-placement="left" title="Editar"> </i>
+                            </a>
+
+                            <img src="@Html.DisplayFor(model => model.portada)" class="mr-3 miniatura"
+                                 alt="...">
+                        </div>
+                        <div class="media-body p-0">
+                            <div class="flex-row bd-highlight d-flex justify-content-start">
+                                <div class="px-2 bd-highlight d-flex align-items-center">
+                                    <p>@i</p>
+                                </div>
+                                <div class=" px-2 pr-5 bd-highlight d-flex align-items-center ">
+                                    <p> @Html.DisplayFor(modelItem => item.Album.nombre)</p>
+                                </div>
+                                <div class="px-2 bd-highlight d-flex align-items-center w-25">
+                                    <p>@Html.DisplayFor(modelItem => item.nombre) </p>
+                                </div>
+
+                                <div class=" bd-highlight d-flex justify-content-end w-100 p-0">
+
+
+                                    <audio controls class="pl-5">
+
+                                        <source src="@Html.DisplayFor(modelItem => item.audio)" type="audio/mp3" />
+
+                                    </audio>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+            }
+            }
+        </div>
+
+
+
+
+    </div>
+</div>

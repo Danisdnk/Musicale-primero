@@ -1,0 +1,70 @@
+﻿@model Musicale.Models.Artist
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+@using (Html.BeginForm("Delete", "Artists", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-12 justify-content-center min-vh-100 p-0 m-0 bg-light" id="main">
+
+
+        <div>
+            <a href="@Request.UrlReferrer" class="btn btn-default btn-lg" title="Back to list">
+                <span class="fas fa-arrow-left" aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-3 w-25">
+
+                <div class="hate">
+                    <img src="@Html.DisplayFor(model=> model.foto)" class="hate" alt="...">
+
+                </div>
+            </div>
+            <div class="col-8 w-100">
+
+                <div>
+
+                    <h2>¿Borrar Album?</h2>
+                    <h4>@ViewBag.MyErrorMessage </h4>
+                    <hr />
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.nombre)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.descripcion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.descripcion)
+                        </dd>
+
+
+
+
+
+                    </dl>
+
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-dark" />
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+         }

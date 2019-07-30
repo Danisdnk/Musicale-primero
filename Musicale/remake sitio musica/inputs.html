@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>Home</title>
+    <link rel="stylesheet" href="font/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
+
+
+</head>
+<!-- 
+https://www.codeply.com/go/ecE6qHNBOC -->
+
+<body>
+    <div class="container-fluid px-0">
+        <div class="row row-offcanvas row-offcanvas-left ">
+            <!-- NAVBAR-MOBILE -->
+            <div class="col-xs-12 d-lg-none">
+                <nav class="nav fixed-bottom bg-dark justify-content-around">
+                    <a class="nav-link active" href="Search.html"><i class="fa fa-id-card" aria-hidden="true"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a class="nav-link disabled" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                </nav>
+            </div>
+
+
+            <!-- NAVBAR DESKTOP -->
+            <div class="wrapper sticky-top altura bg-dark">
+
+
+
+                <div class="col d-none bg-dark d-lg-block sidebar-offcanvas pl-4" id="sidebar">
+
+
+
+                    <div class=" nav flex-sm-column bg-dark mt-5 text-center" id="menu">
+
+                        <div data-target="#item1" data-toggle="collapse " class="my-5">
+                            <a href="Search.html">
+                                <i class="fa fa-home fa-2x text-left align-middle "></i></a>
+                            <span class="collapse in hidden-xs">
+                                <a href="index.html" class="ml-1 mr-1">Home</a>
+                            </span>
+
+                        </div>
+                        <div data-target="#item2" data-toggle="collapse" class="my-5">
+                            <a href="Search.html" class="ml-1 mr-1">
+                                <i class="far fa-star fa-2x text-left align-middle"></i> </a>
+                            <span class="collapse in hidden-xs">
+                                <a href="Search.html" class="ml-1 mr-1">Artistas</a>
+                            </span>
+
+                        </div>
+                        <a href="#" data-target="#item3" data-toggle="collapse" class="my-5 ">
+                            <i class="fa fa-compact-disc fa-2x text-left align-middle "></i>
+                            <span class="collapse in hidden-xs  ">
+                                <span class="ml-1 mr-1">Albums </span>
+                            </span>
+
+                        </a>
+                        <a href="#" data-target="#item1" data-toggle="collapse" class="my-5">
+                            <i class="fa fa-plus fa-2x text-left align-middle "></i>
+                            <span class="collapse in hidden-xs ">
+                                <span class="ml-1 mr-1">Agregar </span>
+                            </span>
+
+                        </a>
+                        <a href="#" data-toggle="offcanvas" data-toggle="collapse" class="my-5" id="main">
+                            <i class="fa fa-angle-double-right fa-2x text-left align-middle "></i>
+                            <span class="collapse in hidden-xs ">
+                                <span class="ml-1 mr-1 ">Ocultar </span>
+                            </span>
+                        </a>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="col">
+
+                <div class="d-flex justify-content-center mt-5 bg-primary" id="main">
+
+
+                        <div class="col-4 m-0 p-0 mt-5 ">
+                              
+                                <img src="/imgs/amaia-album-cover2.jpg" class=" w-50" alt="">
+                           
+
+                            <div class="input-group mb-3 w-50">
+
+                                <input type="file" id="inputGroupFile02">
+                                <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+
+                            </div>
+                        </div>
+
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row mt-5">
+
+                       
+                            
+                            <div class="col-4 mb-3">
+
+                                    <label for="validationCustom01">First name</label>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
+                                        value="Mark" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+    
+    
+                                    <label for="validationCustomUsername">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername"
+                                            placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </form>
+
+
+                    <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                        (function () {
+                            'use strict';
+                            window.addEventListener('load', function () {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function (form) {
+                                    form.addEventListener('submit', function (event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                });
+                            }, false);
+                        })();
+                    </script>
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+﻿@model Musicale.Models.Song
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+@using (Html.BeginForm("Delete", "Songs", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="col-12 justify-content-center min-vh-100 p-0 m-0 bg-light" id="main">
+
+
+
+        <div>
+
+            <a href="@Url.Action("Index", "Songs")" class="d-inline-flex btn btn-dark  ml-3 my-3"> volver</a>
+
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-3 w-25">
+
+
+            </div>
+            <div class="col-8 w-100">
+
+                <div>
+
+                    <h2>¿Borrar Cancion?</h2>
+                    
+                    <hr />
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.nombre)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.audio)
+                        </dt>
+
+                        <dd>
+                        
+                            <audio  class="pl-5" controls>
+                                <source src=" @Html.DisplayFor(model => model.audio)" type="audio/mp3" />
+
+                            </audio>
+
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Album.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Album.nombre)
+                        </dd>
+
+                    </dl>
+
+
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-dark" /> |
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        }
