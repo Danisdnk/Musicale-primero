@@ -11,9 +11,7 @@ namespace Musicale.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Web;
-
+    
     public partial class Artist
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,19 +21,10 @@ namespace Musicale.Models
         }
     
         public int ID { get; set; }
-
-
-        [Required(ErrorMessage = "Ingrese nombre del Artista")]
         public string nombre { get; set; }
-
-
-        [Required]
-        [StringLength(500, ErrorMessage = "la descripcion debe tener entre {2} a {1} caracteres.", MinimumLength =300)]
         public string descripcion { get; set; }
         public string foto { get; set; }
-
-        public HttpPostedFileBase ArtistImageFile { get; set; }
-
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Album> Albums { get; set; }
     }

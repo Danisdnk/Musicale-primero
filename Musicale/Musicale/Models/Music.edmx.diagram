@@ -7,7 +7,7 @@
       <Diagram DiagramId="2949ba29cbe9430384bbadb0eca9a8b7" Name="Diagram1">
         <EntityTypeShape EntityType="MusicApiModel.Album" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="MusicApiModel.Artist" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MusicApiModel.Gender" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicApiModel.Gender" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MusicApiModel.Song" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="MusicApiModel.FK_Album_Artist" ManuallyRouted="false" />
         <AssociationConnector Association="MusicApiModel.FK_Album_Gender" ManuallyRouted="false" />

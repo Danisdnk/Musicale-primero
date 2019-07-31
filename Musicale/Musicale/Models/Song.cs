@@ -11,21 +11,14 @@ namespace Musicale.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Web;
-
+    
     public partial class Song
     {
         public int ID { get; set; }
-       
         public string nombre { get; set; }
-
         public string audio { get; set; }
         public Nullable<int> AlbumID { get; set; }
-
+    
         public virtual Album Album { get; set; }
-
-        public HttpPostedFileBase UserAudioFile { get; set; }
-        
     }
 }

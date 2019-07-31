@@ -177,8 +177,8 @@ body {
         }
 
         .blend {
-            max-height: 100%;
-            margin-top: 3vh;
+                
+            margin-top: -20px;
             margin-left: 0px !important;
         }
    

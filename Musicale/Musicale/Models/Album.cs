@@ -11,9 +11,7 @@ namespace Musicale.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Web;
-
+    
     public partial class Album
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,29 +21,14 @@ namespace Musicale.Models
         }
     
         public int ID { get; set; }
-
-        [Required(ErrorMessage = "Ingrese nombre del album")]
         public string nombre { get; set; }
-
-        [Range(1800, 2019)]
-        [Required(ErrorMessage = "ingrese numeros entre 1800, 2019 ")]
         public string anio { get; set; }
         public int generoID { get; set; }
-
-       
-            
         public string portada { get; set; }
         public Nullable<int> ArtistaID { get; set; }
     
         public virtual Artist Artist { get; set; }
-
-      
         public virtual Gender Gender { get; set; }
-
-     
-        public HttpPostedFileBase UserImageFile { get; set; }
-
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Song> Songs { get; set; }
     }

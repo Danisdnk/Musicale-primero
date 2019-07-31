@@ -13,7 +13,7 @@
 
         <div class="row placa-artista justify-content-between pl-4">
 
-            <div class="  col-xs-12 col-sm-12 col-md-8 col-lg-7 pl-5 mb-3 text-white">
+            <div class="  col-xs-12 col-sm-12 col-md-8 col-lg-8 pl-5 mb-3 text-white">
                 <div>
                     <a href="@Request.UrlReferrer" class="btn btn-default btn-lg" title="Back to list">
                         <span class="fas fa-arrow-left text-white" aria-hidden="true"></span>
@@ -27,8 +27,8 @@
                 <h1 class="font-weight-bolder mb-3 text-white artistafont">@Html.DisplayFor(model => model.nombre)</h1>
 
                 <p class="d-none d-md-block"> @Html.DisplayFor(model => model.descripcion)</p>
-                <div class="d-flex flex-row bd-highlight mt-5 mb-3">
-                    <div class="p-2  bd-highlight">  @Html.DisplayFor(model => model.Albums.FirstOrDefault().Gender.genero)</div>
+                <div class="d-flex flex-row bd-highlight mt-1 mb-3">
+                    <div class="p-2 bd-highlight"> @Html.DisplayFor(model => model.Albums.FirstOrDefault().Gender.genero)</div>
                     <div class="p-2 pl-5 bd-highlight">Flex item 2</div>
                     <div class="p-2 pl-5 bd-highlight">Flex item 3</div>
                 </div>
